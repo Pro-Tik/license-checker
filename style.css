@@ -1,0 +1,97 @@
+/* 1. Global Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5; /* Light grey background */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;     /* Horizontal center */
+    justify-content: center; /* Vertical center */
+    height: 100vh;           /* Full viewport height */
+    padding: 20px;
+}
+
+/* 2. Heading Styling */
+#heading {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+    text-align: center;
+}
+
+/* 3. Form Container Styling */
+#licenseform {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Keeps the form from getting too wide */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between input and button */
+}
+
+/* 4. Input Field Styling */
+#licensekey {
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 2px solid #e1e1e1;
+    border-radius: 6px;
+    transition: border-color 0.3s ease;
+    outline: none;
+}
+
+#licensekey:focus {
+    border-color: #3498db; /* Blue border on click */
+}
+
+/* 5. Button Styling */
+#submit {
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #3498db;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#submit:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+#submit:active {
+    transform: scale(0.98); /* Slight click effect */
+}
+
+/* 6. Result Text Styling */
+#result {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: center;
+    min-height: 1.5rem; /* Keeps space reserved so layout doesn't jump */
+}
+
+/* Hide the <br> tag since we are using Flexbox */
+br {
+    display: none;
+}
+
+/* Optional: Helper classes for your JavaScript to use later */
+.success {
+    color: #27ae60; /* Green */
+}
+
+.error {
+    color: #e74c3c; /* Red */
+}
